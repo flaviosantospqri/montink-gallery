@@ -26,7 +26,8 @@ const Api = {
       return {
         error: true,
         message:
-          error.message || "An error occurred while fetching the address.",
+          (error instanceof Error && error.message) ||
+          "An error occurred while fetching the address.",
       };
     }
   },
