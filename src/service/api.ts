@@ -35,14 +35,26 @@ const Api = {
   getProductMock: () => {
     return {
       id: 1,
-      name: "Tênis Air Honda",
-      price: 100.0,
-      description: "This is a mock product for testing purposes.",
+      nome: "Tênis Air Honda",
+      preco: 100.0,
+      informacao: "Tênis confortável, ideal para corridas e caminhadas.",
       listImage: [
         "https://i.imgur.com/4R5bHuf.jpeg",
         "https://i.imgur.com/D55o9Tw.jpeg",
         "https://i.imgur.com/XroFvXF.jpeg",
       ],
+      variantes: {
+        tamanhos: [
+          { tamanho: "38", quantidade: 3 },
+          { tamanho: "39", quantidade: 0 },
+          { tamanho: "40", quantidade: 7 },
+          { tamanho: "41", quantidade: 5 },
+          { tamanho: "42", quantidade: 10 },
+        ],
+        cores: ["Preto", "Branco", "Vermelho"],
+      },
+      estoque: 25,
+      categoria: "Calçados",
     };
   },
 };
