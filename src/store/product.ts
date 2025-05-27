@@ -1,38 +1,5 @@
 import { create } from "zustand";
-
-export interface Tamanho {
-  tamanho: string;
-  quantidade: number;
-}
-
-export interface Produto {
-  id: number;
-  nome: string;
-  preco: number;
-  informacao: string;
-  listImage: string[];
-  variantes: {
-    tamanhos: Tamanho[];
-    cores: string[];
-  };
-}
-
-interface ProdutoState extends Produto {
-  selectedSize: Tamanho | null;
-  selectedColor: string;
-  listImage: string[];
-  variantes: {
-    tamanhos: Tamanho[];
-    cores: string[];
-  };
-  mainImage: string;
-  setProduto: (produto: Produto) => void;
-  setSelectedSize: (size: Tamanho) => void;
-  setSelectedColor: (color: string) => void;
-  setMainImage: (image: string) => void;
-  reset: () => void;
-}
-
+import type { ProdutoState, Tamanho } from "../types";
 const getDefaultSize = (tamanhos: Tamanho[]): Tamanho | null => {
   return tamanhos.find((size) => size.quantidade > 0) ?? null;
 };
