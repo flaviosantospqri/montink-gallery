@@ -1,5 +1,6 @@
 import React from 'react';
-import useProductStore, { type Tamanho } from '../store/product';
+import useProductStore from '../store/product';
+import type { Tamanho } from '../types';
 
 const InfoProduct: React.FC = () => {
     const {
