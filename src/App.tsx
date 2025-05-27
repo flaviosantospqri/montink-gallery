@@ -1,5 +1,5 @@
 // App.tsx
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Api from './service/api';
 import useProductStore from './store/product';
 import ImageGallery from './components/imageGallery';
