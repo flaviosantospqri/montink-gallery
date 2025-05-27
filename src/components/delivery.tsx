@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
-import type { Address } from '../types/cep';
+
 import type { ApiError } from '../types/error';
 import Api from '../service/api';
+import type { Address } from '../types';
 
 const Delivery: React.FC = () => {
     const { control, handleSubmit, formState: { errors }, reset } = useForm<{ cep: string }>();

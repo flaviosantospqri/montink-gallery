@@ -1,3 +1,8 @@
+export interface ApiError {
+  error: true;
+  message: string;
+}
+
 export interface Address {
   cep: string;
   logradouro: string;
