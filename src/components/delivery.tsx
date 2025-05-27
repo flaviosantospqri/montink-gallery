@@ -56,7 +56,7 @@ const Delivery: React.FC = () => {
 
             <button
                 type="submit"
-                className="bg-blue-500 text-white px-4 py-1 rounded hover:bg-blue-600"
+                className="cursor-pointer bg-blue-500 text-white px-4 py-1 rounded hover:bg-blue-600"
                 disabled={loading}
             >
                 {loading ? 'Buscando...' : 'Buscar Endereço'}
@@ -65,7 +65,7 @@ const Delivery: React.FC = () => {
             {address && 'error' in address ? (
                 <p className="text-red-500">{address.message}</p>
             ) : address ? (
-                <div className="text-sm text-gray-700">
+                <div className="text-sm text-white-700">
                     <p>{address.logradouro}, {address.bairro}</p>
                     <p>{address.localidade} - {address.uf}</p>
                 </div>

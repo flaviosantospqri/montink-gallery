@@ -9,7 +9,7 @@ const ImageGallery: React.FC = () => {
     }
 
     return (
-        <div className="flex flex-col gap-4 items-center">
+        <div className="flex flex-col gap-4 items-start">
             {mainImage ? (
                 <div className="border rounded w-full md:w-[35vw] max-w-md h-[400px] overflow-hidden bg-white flex justify-center items-center">
                     <img

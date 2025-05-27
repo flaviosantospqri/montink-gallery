@@ -4,6 +4,7 @@ import Api from './service/api';
 import useProductStore from './store/product';
 import ImageGallery from './components/imageGallery';
 import InfoProduct from './components/infoProduct';
+import Delivery from './components/delivery';
 
 const STORAGE_KEY = 'productUserSelections';
 const EXPIRATION_MINUTES = 15;
@@ -86,14 +87,18 @@ function App() {
 
 
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="container mx-auto max-w-4xl px-6 py-4 flex flex-col md:flex-row gap-10 items-start">
-        <ImageGallery />
-        <div className="flex flex-col gap-6 w-full">
+    <div className="min-h-screen w-full flex items-center justify-center max-w-[1100px] mx-auto p-10">
+      <div className="flex flex-col md:flex-row gap-10 w-full items-stretch">
+        <div className="w-full md:flex-1 md:min-w-[400px] md:max-w-[500px] flex-shrink-0">
+          <ImageGallery />
+        </div>
+        <div className="w-full md:flex-1 md:min-w-[400px] md:max-w-[500px] flex flex-col gap-5">
           <InfoProduct />
+          <Delivery />
         </div>
       </div>
     </div>
+
   );
 }
 

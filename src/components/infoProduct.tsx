@@ -33,7 +33,7 @@ const InfoProduct: React.FC = () => {
                                     key={index}
                                     onClick={() => !disabled && setSelectedSize(size)}
                                     disabled={disabled}
-                                    className={`border rounded px-3 py-2 text-sm ${selected ? 'border-blue-500 bg-blue-100' : 'border-gray-300'
+                                    className={`border rounded px-3 py-2 text-sm cursor-pointer ${selected ? 'border-blue-500 bg-green-500' : 'border-gray-300'
                                         } ${disabled ? 'opacity-50 cursor-not-allowed' : 'hover:border-blue-500'} transition`}
                                 >
                                     {size.tamanho}
@@ -52,7 +52,7 @@ const InfoProduct: React.FC = () => {
                                 <button
                                     key={index}
                                     onClick={() => setSelectedColor(color)}
-                                    className={`border rounded px-3 py-2 text-sm ${selected ? 'border-red-500 bg-red-100' : 'border-gray-300 hover:border-red-500'} transition`}
+                                    className={`border rounded px-3 py-2 text-sm cursor-pointer ${selected ? 'border-blue-500 bg-green-500' : 'border-gray-300 hover:border-blue-500'} transition`}
                                 >
                                     {color}
                                 </button>
